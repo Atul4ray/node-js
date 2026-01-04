@@ -1,181 +1,58 @@
-# 📚 Books CRUD REST API
+# Node.js Express REST API
 
-A simple **Proof of Concept (POC)** RESTful API built using **Node.js** and **Express.js** to manage books. This project demonstrates basic **CRUD (Create, Read, Update, Delete)** operations using an **in-memory database**.
-
----
-
-## 🚀 Features
-
-* Get all books
-* Get book by ID
-* Create a new book
-* Update existing book
-* Delete a book
-* Proper HTTP status codes & error handling
-* Clean and extensible structure
+Simple Node.js + Express REST API (POC) using standard Node.js project structure.
 
 ---
 
-## 🛠️ Tech Stack
-
-* **Node.js**
-* **Express.js**
-* **JavaScript (ES6)**
-* **REST API / JSON**
-
----
-
-## 📂 Project Structure
+## Project Structure
 
 ```
-project-root/
-│── index.js        # Main server file
-│── package.json    # Project metadata & dependencies
-│── README.md       # Project documentation
+src/
+ ├── server.js        # App entry point
+ ├── app.js           # Express app setup
+ ├── routes/          # API routes
+ └── controllers/     # Controller logic
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## Setup & Run
 
-### 1️⃣ Clone the repository
-
-```bash
-git clone <repository-url>
-cd project-root
-```
-
-### 2️⃣ Install dependencies
-
+### 1. Install dependencies
 ```bash
 npm install
 ```
 
-### 3️⃣ Start the server
-
+### 2. Start server
 ```bash
-node index.js
+npm start
 ```
 
-Server will start on:
-
+Server will run at:
 ```
 http://localhost:3000
 ```
 
 ---
 
-## 📘 API Endpoints
+## API Endpoints
 
-### ➤ Get All Books
-
-```
-GET /books
-```
-
-### ➤ Get Book by ID
-
-```
-GET /books/:id
-```
-
-### ➤ Create Book
-
-```
-POST /books
-```
-
-**Request Body**
-
-```json
-{
-  "title": "Book Three",
-  "author": "Author Three"
-}
-```
-
-### ➤ Update Book
-
-```
-PUT /books/:id
-```
-
-**Request Body**
-
-```json
-{
-  "title": "Updated Title",
-  "author": "Updated Author"
-}
-```
-
-### ➤ Delete Book
-
-```
-DELETE /books/:id
-```
+- GET    `/books`
+- GET    `/books/:id`
+- POST   `/books`
+- PUT    `/books/:id`
+- DELETE `/books/:id`
 
 ---
 
-## ❗ Error Handling
+## Tech Stack
 
-The API returns meaningful error responses:
-
-```json
-{
-  "error": "Book with id 10 does not exist!"
-}
-```
-
-Common error scenarios:
-
-* Invalid ID format
-* Missing required fields
-* Resource not found
+- Node.js
+- Express.js
+- JavaScript
 
 ---
 
-## 🧪 Testing
+## Author
 
-You can test the APIs using:
-
-* **Postman**
-* **cURL**
-
-Make sure to set:
-
-```
-Content-Type: application/json
-```
-
----
-
-## ⚠️ Limitations
-
-* Uses in-memory data (data resets on server restart)
-* No authentication or authorization
-* Not production-ready
-
----
-
-## 🔮 Future Enhancements
-
-* MongoDB / PostgreSQL integration
-* MVC architecture (Controller / Service / Routes)
-* Input validation using Joi / Zod
-* Authentication using JWT
-* Swagger API documentation
-* TypeScript support
-
----
-
-## 👨‍💻 Author
-
-**Atul**
-Software Engineer
-
----
-
-## 📄 License
-
-This project is for **learning and POC purposes only**.
+Atul
